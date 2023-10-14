@@ -119,8 +119,7 @@ class Particle {
             if (distance < this.system.mouse_radius) {
                 const direction = this.position.direction(this.system.mouse);
                 const strength = this.system.mouse_strength * this.system.mouse_type * -1;
-                const influence = strength / distance;
-                this.velocity.add(direction.scale(influence));
+                this.velocity.add(direction.scale(strength));
             }
         }
         ;
@@ -307,7 +306,7 @@ class System {
         this.mouse = new vector_1.default(0, 0);
         this.mouse_type = 0;
         this.mouse_radius = 200;
-        this.mouse_strength = 1000;
+        this.mouse_strength = 50;
         this.particle_radius = 15;
         this.restitution = 0.5;
         this.smoothing_radius = 100;

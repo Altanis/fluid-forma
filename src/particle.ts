@@ -109,8 +109,7 @@ export default class Particle
             {
                 const direction = this.position.direction(this.system.mouse);
                 const strength = this.system.mouse_strength * this.system.mouse_type * -1;
-                const influence = strength / distance;
-                this.velocity.add(direction.scale(influence));
+                this.velocity.add(direction.scale(strength));
             }
         };
     };

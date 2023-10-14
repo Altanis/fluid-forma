@@ -17,7 +17,7 @@ export default class System
     public mouse: Vector = new Vector(0, 0);
     public mouse_type: number = 0;
     public mouse_radius: number = 200;
-    public mouse_strength: number = 1000;
+    public mouse_strength: number = 50;
 
     public particle_radius: number = 15;
     public restitution: number = 0.5;
