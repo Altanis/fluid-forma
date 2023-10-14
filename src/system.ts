@@ -80,13 +80,15 @@ export default class System
     {
         let time = performance.now();
 
-        for (const particle of this.particles)
+        for (let i = 0; i < 5; ++i)
         {
-            particle.update();
+            for (const particle of this.particles)
+            {
+                particle.update();
+            };
         };
 
         time = performance.now() - time;
         this.world_performance = time;
-        // console.log(this.dt);
     };
 };

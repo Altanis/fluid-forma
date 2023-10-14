@@ -4,8 +4,8 @@ const _dat = window.dat.gui;
 var gui = new _dat.GUI();
 
 // Set default values
-var defaultWidth = window.innerWidth * 2;
-var defaultHeight = window.innerHeight * 2;
+var defaultWidth = window.innerWidth * window.devicePixelRatio;
+var defaultHeight = window.innerHeight * window.devicePixelRatio;
 var defaultPressureConstant = 3000;
 var defaultParticleRadius = 15;
 var defaultNumParticles = 484;
