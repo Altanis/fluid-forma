@@ -8,4 +8,4 @@ left click to attract particles (does not work well), right click to repel parti
 
 ## media
 ![image](img/image.png)
-![video](img/2023-10-14%2017-22-12.mp4)
+https://github.com/Altanis/fluid-forma/assets/38045884/461d9954-87ff-4c3f-8a21-ae7db4bfda1e
