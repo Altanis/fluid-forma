@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         filename: "fluid.js", 
-        path: path.join(__dirname, "build"),
+        path: path.join(__dirname, "public"),
     },
     module: {
         rules: [{
