@@ -27,6 +27,7 @@ export default class System
 
     public physics: Physics;
 
+    public steps: number = 1;
     public renderer: Renderer | undefined;
     public zoom = 1;
 
@@ -40,6 +41,7 @@ export default class System
         surface_tension: number,
         gravity: number,
         particle_count: number,
+        steps: number,
         canvas?: HTMLCanvasElement
     )
     {
@@ -49,6 +51,7 @@ export default class System
         this.stiffness = stiffness;
         this.viscosity = viscosity;
         this.gravity = gravity;
+        this.steps = steps;
 
         this.physics = new Physics(this);
 
@@ -80,7 +83,7 @@ export default class System
     {
         let time = performance.now();
 
-        for (let i = 0; i < 5; ++i)
+        for (let i = 0; i < this.steps; ++i)
         {
             for (const particle of this.particles)
             {

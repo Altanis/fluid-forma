@@ -302,7 +302,7 @@ const particle_1 = __importDefault(__webpack_require__(217));
 const renderer_1 = __importDefault(__webpack_require__(419));
 const physics_1 = __importDefault(__webpack_require__(357));
 class System {
-    constructor(width, height, stiffness, viscosity, surface_tension, gravity, particle_count, canvas) {
+    constructor(width, height, stiffness, viscosity, surface_tension, gravity, particle_count, steps, canvas) {
         this.particles = [];
         this.mouse = new vector_1.default(0, 0);
         this.mouse_type = 0;
@@ -312,6 +312,7 @@ class System {
         this.restitution = 0.5;
         this.smoothing_radius = 100;
         this.rest_density = 4;
+        this.steps = 1;
         this.zoom = 1;
         this.world_performance = 0;
         this.width = width;
@@ -320,6 +321,7 @@ class System {
         this.stiffness = stiffness;
         this.viscosity = viscosity;
         this.gravity = gravity;
+        this.steps = steps;
         this.physics = new physics_1.default(this);
         // uniform grid of particles (column and row)
         const columns = Math.floor(Math.sqrt(particle_count));
@@ -345,7 +347,7 @@ class System {
     ;
     update() {
         let time = performance.now();
-        for (let i = 0; i < 5; ++i) {
+        for (let i = 0; i < this.steps; ++i) {
             for (const particle of this.particles) {
                 particle.update();
             }
