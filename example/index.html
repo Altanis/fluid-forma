@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game Renderer</title>
+    <style>
+        body {
+            background: #000;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #stats {
+            position: absolute;
+            z-index: 999;
+            color: white;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            cursor: default;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+    <script src="../build/fluid.js"></script>
+</head>
+<body>
+    <div id="stats">
+        <p>FPS: <span id="fps">60</span></p>
+        <p>World Update Rate: <span id="tickRate">60</span></p>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script src="index.js" defer></script>
+</body>
+</html>

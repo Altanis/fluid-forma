@@ -1,0 +1,18 @@
+{
+    "devDependencies": {
+        "ts-loader": "^9.5.0",
+        "webpack-cli": "^5.1.4"
+    },
+    "name": "fluidsim",
+    "version": "1.0.0",
+    "main": "null",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "debug": "nodemon --exec \"npx webpack\" --watch src --ext ts"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
